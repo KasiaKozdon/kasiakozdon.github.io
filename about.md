@@ -1,3 +1,9 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
 My education and interests lie at the intersection of artificial intelligence and biomedical sciences. 
 I like my work to deliver real world benefits. I believe that success in tech is a combo of two main things: understanding how to balance developing novel cutting edge solutions vs pragmatic hacking, and great teams who care about each other.
 
