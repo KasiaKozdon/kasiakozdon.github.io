@@ -5,4 +5,4 @@ description: Bookmark this to keep an eye on my project updates!
 include: [_pages]
 
 header_pages:
-  - about.md
+  - _pages/about.md
