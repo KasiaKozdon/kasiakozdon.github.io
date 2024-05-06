@@ -1,3 +1,11 @@
+---
+title:  "XAI: Explainable AI"
+categories: explainableAI
+isPost: true
+layout: post
+---
+
+
 #XAI: Explainable AI. Introduction.
 
 ##What is Explainable AI (XAI)
