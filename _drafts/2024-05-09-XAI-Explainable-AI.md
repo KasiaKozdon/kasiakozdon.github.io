@@ -8,10 +8,19 @@ layout: post
 
 # XAI: Explainable AI. An introduction.
 With the rapidly increasing abundance of AI in all areas of our lives, we are starting to pay more attention to how exactly its decisions are produced. Methodologies assisting with gaining understanding of the AI models are referred to as Explainable AI (XAI).
-Lets talk in more detail about what XAI is and why it matters; about how the explanations can be useful, but also misleading.
+We will talk in more detail about what XAI is and why it matters; about how the explanations can be useful, but also misleading.
 
 ## What is Explainable AI (XAI)
-"Technically, there is no standard and generally accepted definition of explainable AI. Actually, XAI term tends to refer to the movement, initiatives, and efforts made in response to AI transparency and trust concerns, more than to a formal technical concept.” [1].
+Lets start by clarifying what we mean by XAI. According to IBM:
+>"Explainable artificial intelligence (XAI) is a set of processes and methods that allows human users to comprehend and trust the results and output created by machine learning algorithms. Explainable AI is used to describe an AI model, its expected impact and potential biases. It helps characterize model accuracy, fairness, transparency and outcomes in AI-powered decision making." [0]
+
+That's a lot of words, but little concrete details. The reason for this vagueness is that:
+>"Technically, there is no standard and generally accepted definition of explainable AI. Actually, XAI term tends to refer to the movement, initiatives, and efforts made in response to AI transparency and trust concerns, more than to a formal technical concept.” [1]
+
+There is no black and white rule defining what is and what is not XAI. 
+
+
+
 Since then, we saw a lot of progress, systematisation, and, importantly, criticisms leading to further improvements. Please keep it in mind when reading even relatively recent content.
 
 Why do we care?
@@ -87,6 +96,7 @@ E.g. Nearest Unlike Neighbour
 * XAI as assistance in ML development
 
 ## References
+0. IBM ["What is explainable AI?"](https://www.ibm.com/topics/explainable-ai)
 1. Adadi and Berrada, 2018
 2. Doshi-Velez and Kim, 2017
 3. Byrne, 2019
