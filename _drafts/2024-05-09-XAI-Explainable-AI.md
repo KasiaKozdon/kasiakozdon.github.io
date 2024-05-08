@@ -17,11 +17,10 @@ Lets start by clarifying what we mean by XAI. According to IBM:
 That's a lot of words, but little concrete details. The reason for this vagueness is that:
 >"Technically, there is no standard and generally accepted definition of explainable AI. Actually, XAI term tends to refer to the movement, initiatives, and efforts made in response to AI transparency and trust concerns, more than to a formal technical concept.” [1]
 
-There is no black and white rule defining what is and what is not XAI. 
-
-Since then, we saw a lot of progress, systematisation, and, importantly, criticisms leading to further improvements. Please keep it in mind when reading even relatively recent content.
+There is no black and white rule defining what is and what is not XAI. Still, we saw a lot of progress, systematisation, and, importantly, criticisms leading to further improvements. 
 
 ![XAI google trends](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/XAI_google_trends.png)
+Because it is important to understand things in proportion (aka Hans Rosling's [rule nr 5](https://www.gapminder.org/factfulness/size/)), lets compare that trendline to AI trend:
 ![XAI vs AI google trends](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/XAI_vs_AI_google_trends.png)
 
 
@@ -102,5 +101,5 @@ E.g. Nearest Unlike Neighbour
 0. IBM ["What is explainable AI?"](https://www.ibm.com/topics/explainable-ai)
 1. Adadi and Berrada, 2018
 2. Doshi-Velez and Kim, 2017
-3. Byrne, 2019
-4. Biran and Cotton, 2017
+4. Byrne, 2019
+5. Biran and Cotton, 2017
