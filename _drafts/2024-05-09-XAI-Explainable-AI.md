@@ -21,7 +21,9 @@ There is no black and white rule defining what is and what is not XAI.
 
 Since then, we saw a lot of progress, systematisation, and, importantly, criticisms leading to further improvements. Please keep it in mind when reading even relatively recent content.
 
-![AI google trends]({{site.url}}/_assets/2024-05-09-XAI-Explainable-AI/XAI_google_trends.png)
+![XAI google trends](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/XAI_google_trends.png)
+![XAI vs AI google trends](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/XAI_vs_AI_google_trends.png)
+
 
 
 Why do we care?
