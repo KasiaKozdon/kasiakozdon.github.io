@@ -19,9 +19,10 @@ That's a lot of words, but little concrete details. The reason for this vaguenes
 
 There is no black and white rule defining what is and what is not XAI. 
 
-
-
 Since then, we saw a lot of progress, systematisation, and, importantly, criticisms leading to further improvements. Please keep it in mind when reading even relatively recent content.
+
+<img src="{{site.baseurl | prepend: site.url}}_assets/2024-05-09-XAI-Explainable-AI/XAI_google_trends.png" alt="XAI google trends" />
+
 
 Why do we care?
 Stakeholders:
