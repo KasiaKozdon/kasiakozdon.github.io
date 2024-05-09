@@ -17,26 +17,22 @@ Lets start by clarifying what we mean by XAI. According to IBM:
 That's a lot of words, but little concrete details. The reason for this vagueness is that:
 >"Technically, there is no standard and generally accepted definition of explainable AI. Actually, XAI term tends to refer to the movement, initiatives, and efforts made in response to AI transparency and trust concerns, more than to a formal technical concept.” [1]
 
-There is no black and white rule defining what is and what is not XAI. Still, we saw a lot of progress, systematisation, and, importantly, criticisms leading to further improvements. 
+There is no black and white rule defining what is and what is not XAI. Still, during the last few years, we saw a lot of progress, systematisation, and, importantly, criticisms leading to further improvements. According to Google trends, XAI is an increasingly popular term.
 
 ![XAI google trends](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/XAI_google_trends.png)
-Because it is important to understand things in proportion (aka Hans Rosling's [rule nr 5](https://www.gapminder.org/factfulness/size/)), lets compare that trendline to AI trend:
+
+Because it is important to understand things in proportion (aka Hans Rosling's [rule nr 5](https://www.gapminder.org/factfulness/size/)), lets compare that trendline to the AI trend (in red):
 ![XAI vs AI google trends](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/XAI_vs_AI_google_trends.png)
+Popularity of XAI may be increasing, but it remains a niche subject in comparison to the popularity of AI in general. XAI is sometimes seen as being at odds with making the models better, as a distraction from the "main" objective and a resourses sink. This article is intended to clarify this misconception, and highlight the benefits and XAI for general public, engineers, and business.
 
+## Who can benefit from XAI?
+When it comes to AI, all of us are stakeholders, mostly in more than one way. Use of XAI can benefit different stakeholder groups.  
+**Users** and **by-standers** (non-users who may still be affected). In some cases, the user has the right to explanation.   
+**Decision makers**, non-AI experts who use AI to augment their decisions. This includes doctors.    
+**Regulatory agencies**... well, lets hope that when they benefit, it is for our own benefit. 
+**ML engineers** are rarely listed as a group benefitting from XAI; they are usually seen as being forced to implement XAI for the benefit of other stakeholders. However, engineers are already routinely using XAI techniques, even if not under this name. Techniques used to gain understanding of the model's strengths and weaknesses easily fall under the XAI umbrella. Their use changes model development from a blind hyperparameters grid search to a data-driven decision process. Other benefits of XAI include understanding what in the data and model matters in order to scale down the less needed parts. This benefits the efforts to drastically scale down the amount of resources needed for LLMs; similarly, it benefits the miniaturisation efforts are taking place at the TinyML end of ML spectrum.   
+**Business decision-makers** can take advantage of XAI to get information on model's suitability as a product. This can include e.g. assessing whether the model performs well on the markets of interest; under what conditions the model is likely to fail. Finally, explanation itself can be a product or a differentiator of a product! We will look at this case later, illustrated by recommender systems.
 
-
-Why do we care?
-Stakeholders:
-* End users (e.g. bank loans applicants)
-* Decision makers (e.g. doctors)
-* Regulatory agencies
-* Engineers
-
-Applications:
-* Bias detection
-* ML troubleshooting
-* Assessing model suitability as a product
-* Explanation as a product
 
 ## Classification of XAI methods
 ### Complexity-related methods 
