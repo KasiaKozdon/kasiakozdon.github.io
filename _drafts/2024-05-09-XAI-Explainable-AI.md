@@ -37,7 +37,9 @@ When it comes to AI, all of us are stakeholders, mostly in more than one way. Us
 Now its time to introduce a bit more systematisation. I will use XAI classification proposed by [Adadi and Berrada](https://ieeexplore.ieee.org/document/8466590). The categories are not exclusive; a model can be assessed within each of the categories.
 ### Complexity-related methods 
 Here, we can talk about methods that are **directly interpretable**, or that can be **reverse engineered** (post-hoc). This is sometimes presented as Interpretable AI vs Explainable AI.  
-Directly interpretable models, as the name suggests, can be understood readily, with no additional methodology required. Examples include decision trees. A decision tree is a hierarchical model where the branching points (nodes) are inquiries, and branches represent possible answer. Traversing the tree culminates in reaching an end node representing a decision. Such trees used to be constructed manually; now are a common trained ML model.    
+Directly interpretable models, as the name suggests, can be understood readily, with no additional methodology required. Examples include decision trees. A decision tree is a hierarchical model where the branching points (nodes) are inquiries, and branches represent possible answer. Traversing the tree culminates in reaching an end node representing a decision. Such trees used to be constructed manually; now are a common trained ML model.   
+![decision tree](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/decision_tree.png)
+Reverse engineered methods apply to models which are black boxes. The models are developed, and only then, post hoc, explainability methodologies are applied. 
 
 ### Scope-related methods
 * Global (how decisions are made in general)
@@ -70,6 +72,7 @@ Info on what would make the outcome better preferred to what would make it worse
 * Hybrid 
 “(...) previous studies have often evaluated the persuasiveness of the justification and not its justifiability. 
 Their experiments showed that for justifiability, feature-based justifications were superior to neighbor-based and user-history-based ones.” [4]
+![psychology of explanations](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/psychology_of_explanation.jpg){:width="50%"}
 
 
 ## Counterfactuals
