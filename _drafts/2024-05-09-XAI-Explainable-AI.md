@@ -23,21 +23,22 @@ There is no black and white rule defining what is and what is not XAI. Still, du
 
 Because it is important to understand things in proportion (aka Hans Rosling's [rule nr 5](https://www.gapminder.org/factfulness/size/)), lets compare that trendline to the AI trend (in red):
 ![XAI vs AI google trends](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/XAI_vs_AI_google_trends.png)
-Popularity of XAI may be increasing, but it remains a niche subject in comparison to the popularity of AI in general. XAI is sometimes seen as being at odds with making the models better, as a distraction from the "main" objective and a resourses sink. This article is intended to clarify this misconception, and highlight the benefits and XAI for general public, engineers, and business.
+Popularity of XAI may be increasing, but it remains a niche subject in comparison to the popularity of AI in general. XAI is sometimes seen as being at odds with making the models better, as a distraction from the "main" objective and a resourses sink. This article is intended to clarify this misconception, and highlight the benefits and XAI for general public, engineers, and businesses.
 
 ## Who can benefit from XAI?
-When it comes to AI, all of us are stakeholders, mostly in more than one way. Use of XAI can benefit different stakeholder groups.  
+When it comes to AI, all of us are stakeholders, mostly in more than one way. Use of XAI can benefit all stakeholder groups.  
 **Users** and **by-standers** (non-users who may still be affected). In some cases, the user has the right to explanation.   
 **Decision makers**, non-AI experts who use AI to augment their decisions. This includes doctors.    
 **Regulatory agencies**... well, lets hope that when they benefit, it is for our own benefit. 
 **ML engineers** are rarely listed as a group benefitting from XAI; they are usually seen as being forced to implement XAI for the benefit of other stakeholders. However, engineers are already routinely using XAI techniques, even if not under this name. Techniques used to gain understanding of the model's strengths and weaknesses easily fall under the XAI umbrella. Their use changes model development from a blind hyperparameters grid search to a data-driven decision process. Other benefits of XAI include understanding what in the data and model matters in order to scale down the less needed parts. This benefits the efforts to drastically scale down the amount of resources needed for LLMs; similarly, it benefits the miniaturisation efforts are taking place at the TinyML end of ML spectrum.   
 **Business decision-makers** can take advantage of XAI to get information on model's suitability as a product. This can include e.g. assessing whether the model performs well on the markets of interest; under what conditions the model is likely to fail. Finally, explanation itself can be a product or a differentiator of a product! We will look at this case later, illustrated by recommender systems.
 
-
 ## Classification of XAI methods
+Now its time to introduce a bit more systematisation. I will use XAI classification proposed by [Adadi and Berrada](https://ieeexplore.ieee.org/document/8466590). The categories are not exclusive; a model can be assessed within each of the categories.
 ### Complexity-related methods 
-* Directly interpretable (e.g. decision trees)
-* Reverse engineered (post-hoc)
+Here, we can talk about methods that are **directly interpretable**, or that can be **reverse engineered** (post-hoc). This is sometimes presented as Interpretable AI vs Explainable AI.  
+Directly interpretable models, as the name suggests, can be understood readily, with no additional methodology required. Examples include decision trees. A decision tree is a hierarchical model where the branching points (nodes) are inquiries, and branches represent possible answer. Traversing the tree culminates in reaching an end node representing a decision. Such trees used to be constructed manually; now are a common trained ML model.    
+
 ### Scope-related methods
 * Global (how decisions are made in general)
 * Local (how a given decision was made)
