@@ -34,11 +34,11 @@ When it comes to AI, all of us are stakeholders, mostly in more than one way. Us
 **Business decision-makers** can take advantage of XAI to get information on model's suitability as a product. This can include e.g. assessing whether the model performs well on the markets of interest; under what conditions the model is likely to fail. Finally, explanation itself can be a product or a differentiator of a product! We will look at this case later, illustrated by recommender systems.
 
 ## Classification of XAI methods
-Now its time to introduce a bit more systematisation. I will use XAI classification proposed by [Adadi and Berrada](https://ieeexplore.ieee.org/document/8466590). The categories are not exclusive; a model can be assessed within each of the categories.
+It's time to introduce a bit more systematisation. I will use XAI classification proposed by [Adadi and Berrada](https://ieeexplore.ieee.org/document/8466590). The categories are not exclusive; a model can be assessed within each of the categories.
 ### Complexity-related methods 
 Here, we can talk about methods that are **directly interpretable**, or that can be **reverse engineered** (post-hoc). This is sometimes presented as Interpretable AI vs Explainable AI.  
 Directly interpretable models, as the name suggests, can be understood readily, with no additional methodology required. Examples include decision trees. A decision tree is a hierarchical model where the branching points (nodes) are inquiries, and branches represent possible answer. Traversing the tree culminates in reaching an end node representing a decision. Such trees used to be constructed manually; now are a common trained ML model.   
-![decision tree](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/decision_tree.png)
+![decision tree](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/decision_tree.png)  
 Reverse engineered methods apply to models which are black boxes. The models are developed, and only then, post hoc, explainability methodologies are applied. 
 
 ### Scope-related methods
@@ -48,6 +48,7 @@ Reverse engineered methods apply to models which are black boxes. The models are
 * Model specific (posterior probabilities of nodes in a Bayesian Network)
 * Model agnostic: a) visualisation: surrogate model, partial dependence plot; b) knowledge extraction: pedagogical, decompositional; c) influence methods; d) example-based: counterfactuals, criticisms
 ### Example: saliency maps
+![saliency maps](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/smoothgrad.png)
 
 ## Classification of explanations
 We can distinguish the following catergories [2]:
