@@ -42,13 +42,20 @@ Directly interpretable models, as the name suggests, can be understood readily, 
 Reverse engineered methods apply to models which are black boxes. The models are developed, and only then, post hoc, explainability methodologies are applied. 
 
 ### Scope-related methods
-* Global (how decisions are made in general)
-* Local (how a given decision was made)
+Explanations can also be provided to capture how model's decisions are made in general - these are referred to as **global** , or to explain how a given decision was made (**local**). 
 ### Model-related methods
-* Model specific (posterior probabilities of nodes in a Bayesian Network)
-* Model agnostic: a) visualisation: surrogate model, partial dependence plot; b) knowledge extraction: pedagogical, decompositional; c) influence methods; d) example-based: counterfactuals, criticisms
+Some of the XAI methods are **model specific**, they work based on unique features of a given model type. An example includes explanations based on posterior probabilities of nodes in a Bayesian Network. While these XAI methods lack generalisability, they make up for it with excelling at making the most out of the model characteristics.   
+**Model agnostic** 
+a) visualisation: surrogate model, partial dependence plot; 
+b) knowledge extraction: pedagogical, decompositional; 
+c) influence methods; 
+d) example-based: counterfactuals, criticisms
+
 ### Example: saliency maps
-![saliency maps](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/smoothgrad.png)
+Lets illustrate how an explanation can fit into the above categories using saliency maps. This method is model specific, it is applied to image inputs of CNNs. Multiple types of saliency maps exist, but they share visualisation of which pixels contributed to the prediction the most. The method is local, it illustrates how a decision on one particular image was made.
+![saliency maps](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/smoothgrad.png)  
+It is very likely that even if you do not work with CNNs, you came across these. They offer intuitive, easily interpretable information that frequently made its way to popular science articles. The image above is aligned with our gut feeling for how a gold fish or a bear could be recognised; what features could be relied on. And here I would like to strongly point something out: I never told you if the network how well the network was doing, whether it classified every eye as a fish and every dog muzzle as a bear. Likely, seeing an explanation that matched your intuitive sense of what is correct gave you trust in the method and in the model. 
+
 
 ## Classification of explanations
 We can distinguish the following catergories [2]:
