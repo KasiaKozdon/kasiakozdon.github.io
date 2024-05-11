@@ -45,8 +45,9 @@ Reverse engineered methods apply to models which are black boxes. The models are
 Explanations can also be provided to capture how model's decisions are made in general - these are referred to as **global** , or to explain how a given decision was made (**local**). 
 ### Model-related methods
 Some of the XAI methods are **model specific**, they work based on unique features of a given model type. An example includes explanations based on posterior probabilities of nodes in a Bayesian Network. While these XAI methods lack generalisability, they make up for it with excelling at making the most out of the model characteristics.   
-**Model agnostic** 
-a) visualisation: surrogate model, partial dependence plot; 
+**Model agnostic** methods can be applied to a wide range of ML models. To start with, we have visualisations, e.g. created with surrogate models and partial dependence plots. Surrogate models are simpler, more easily interpretable or explainable models trained on the pairs input-output of the model under investigation (which was trained on pairs input-correct answer). Development of surrogate models presents a bit of cat and mouse problem. A simple surrogate model fulfills the requirement for interpretability; but due to its simplicity, it may fail to faithfully capture the behaviour of the model under investigation. A more complex surrogate model could do a better job at capturing the dynamics of the investigated model - but would it still provide the benefit of interpretability or explainability? This dillema illustrates that XAI techniques can shift the problem instead of solving it. Their correctness requires maybe even more scrutiny than the original model, given the trustworthiness they are assumed to provide.  
+Partial dependence plots are an example of a quite different visualisation. They illustrate a relation between an input feature or features and the output of the model. Usually, all but one features are kept constant, while the feature of interest is varied and the resulting output captured. Through this, we can see whether the impact of the feature is linear, monotonic etc.  
+
 b) knowledge extraction: pedagogical, decompositional; 
 c) influence methods; 
 d) example-based: counterfactuals, criticisms
