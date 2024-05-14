@@ -58,13 +58,10 @@ It is very likely that even if you do not work with CNNs, you came across these.
 
 
 ## Classification of explanations
-We can distinguish the following catergories [2]:
-### Application-grounded
-which judges explanations based on how much they assist humans in performing a real task; 
-### Human-grounded
-which judges explanations based on human preference or ability to reason about a model from the explanation;
-### Functionally-grounded
-which judges explanations without human input, based on some formal proxy for interpretability.
+Explanations themselves can also be classified, e.g. based on for whom and in what context they are intended to serve [2].
+**Application-grounded** which judges explanations based on how much they assist humans in performing a real task; 
+**Human-grounded** which judges explanations based on human preference or ability to reason about a model from the explanation;
+**Functionally-grounded** which judges explanations without human input, based on some formal proxy for interpretability.
 
 ## Prediction interpretation & justification
 Limitless explanations can be created. Which explanations are useful? Can the choice of explanation manipulate the user? Based on examples from [3].
