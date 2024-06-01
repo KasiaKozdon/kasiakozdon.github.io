@@ -9,7 +9,7 @@ layout: post
 {:toc}
 
 # XAI: Explainable AI. An introduction.
-With the rapidly increasing abundance of AI in all areas of our lives, we are starting to pay more attention to how exactly its decisions are produced. Methodologies assisting with gaining understanding of the AI models are referred to as Explainable AI (XAI).
+With the rapidly increasing abundance of AI in all areas of our lives, we are starting to pay more attention to how exactly its decisions are produced. Methodologies assisting with gaining understanding of the AI models are referred to as Explainable AI (XAI). These methods can highlight the main data features affecting a model's decision, indicate how robust a decisions is, and privide information needed to fix a model.  
 We will talk in more detail about what XAI is and why it matters; about how the explanations can be useful, but also misleading.  
 Lets start by clarifying what we mean by XAI. According to IBM:
 >"Explainable artificial intelligence (XAI) is a set of processes and methods that allows human users to comprehend and trust the results and output created by machine learning algorithms. Explainable AI is used to describe an AI model, its expected impact and potential biases. It helps characterize model accuracy, fairness, transparency and outcomes in AI-powered decision making." [0]
@@ -31,7 +31,7 @@ When it comes to AI, all of us are stakeholders, mostly in more than one way. Us
 **Decision makers**, non-AI experts who use AI to augment their decisions. This includes doctors.    
 **Regulatory agencies**... well, lets hope that when they benefit, it is for our own benefit.   
 **ML engineers** are rarely listed as a group benefitting from XAI; they are usually seen as being forced to implement XAI for the benefit of other stakeholders. However, engineers are already routinely using XAI techniques, even if not under this name. Techniques used to gain understanding of the model's strengths and weaknesses easily fall under the XAI umbrella. Their use changes model development from a blind hyperparameters grid search to a data-driven decision process. Other benefits of XAI include understanding what in the data and model matters in order to scale down the less needed parts. This benefits the efforts to drastically scale down the amount of resources needed for LLMs; similarly, it benefits the miniaturisation efforts are taking place at the TinyML end of ML spectrum.   
-**Business decision-makers** can take advantage of XAI to get information on model's suitability as a product. This can include e.g. assessing whether the model performs well on the markets of interest; under what conditions the model is likely to fail. Finally, explanation itself can be a product or a differentiator of a product! We will look at this case later, illustrated by recommender systems.
+**Business decision-makers** can take advantage of XAI to get information on model's suitability as a product. This can include e.g. assessing whether the model performs well on the markets of interest; under what conditions the model is likely to fail. Finally, explanation itself can be a product or a differentiator of a product! We will look at this case later, illustrated by recommender systems.  
 
 # What kinds of XAI methods are there?
 It's time to introduce a bit more systematisation. I will use XAI classification proposed by [Adadi and Berrada](https://ieeexplore.ieee.org/document/8466590). The categories are not exclusive; a model can be assessed within each of the categories.
@@ -78,6 +78,8 @@ Info on what would make the outcome better preferred to what would make it worse
 “(...) previous studies have often evaluated the persuasiveness of the justification and not its justifiability. 
 Their experiments showed that for justifiability, feature-based justifications were superior to neighbor-based and user-history-based ones.” [4]
 ![psychology of explanations](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/psychology_of_explanation.jpg)
+
+TODO: "Certain AI problems (such as content recommendation or information retrieval) also aim at producing diverse recommendations rather than highly-scoring yet similar results. "
 
 
 # Counterfactuals
