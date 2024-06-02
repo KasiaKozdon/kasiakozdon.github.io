@@ -34,6 +34,7 @@ When it comes to AI, all of us are stakeholders, mostly in more than one way. Us
 **Business decision-makers** can take advantage of XAI to get information on model's suitability as a product. This can include e.g. assessing whether the model performs well on the markets of interest; under what conditions the model is likely to fail. Finally, explanation itself can be a product or a differentiator of a product! We will look at this case later, illustrated by recommender systems.  
 
 # What kinds of XAI methods are there?
+TODO diagram https://miro.medium.com/v2/resize:fit:720/format:webp/1*Qr0is7LEUjhl9pIdv4sNHA.jpeg  
 It's time to introduce a bit more systematisation. I will use XAI classification proposed by [Adadi and Berrada](https://ieeexplore.ieee.org/document/8466590). The categories are not exclusive; a model can be assessed within each of the categories.
 ## Complexity-related methods 
 Here, we can talk about methods that are **directly interpretable**, or that can be **reverse engineered** (post-hoc). This is sometimes presented as Interpretable AI vs Explainable AI.  
