@@ -27,7 +27,7 @@ Popularity of XAI may be increasing, but it remains a niche subject in compariso
 
 # Who can benefit from XAI?
 When it comes to AI, all of us are stakeholders, mostly in more than one way. Use of XAI can benefit all stakeholder groups.  
-**Users** and **by-standers** (non-users who may still be affected). In some cases, the user has the right to explanation.   
+**Users** and **by-standers** (non-users who may still be affected). In some cases, the user has the right to explanation. Under European Union's General Data Protection Regulation (GDPR), a person has the right to an explanation and chalenging decisons which were made in an automated way. French Digital Republic Act specifically lists that even partially automated decisions made by public sector bodies should by accompanied by information on handling of data parameters, including their weighting.  
 **Decision makers**, non-AI experts who use AI to augment their decisions. This includes doctors.    
 **Regulatory entities and agencies**... well, lets hope that when they benefit, it is for our own benefit. Bodies such as GDPR, DARPA ensure consistency with the existing legislation and user rights.  
 **ML engineers** are rarely listed as a group benefitting from XAI; they are usually seen as being forced to implement XAI for the benefit of other stakeholders. However, engineers are already routinely using XAI techniques, even if not under this name. Techniques used to gain understanding of the model's strengths and weaknesses easily fall under the XAI umbrella. Their use changes model development from a blind hyperparameters grid search to a data-driven decision process. Other benefits of XAI include understanding what in the data and model matters in order to scale down the less needed parts. This benefits the efforts to drastically scale down the amount of resources needed for LLMs; similarly, it benefits the miniaturisation efforts are taking place at the TinyML end of ML spectrum.   
@@ -100,6 +100,10 @@ an explanation intended to ensure the user feels a decision was justified or exc
 * Proximate (the closest possible world)
 E.g. Nearest Unlike Neighbour
 * Preferably actionable
+
+TODO 
+- chatGPT
+- “[Dodson et al., 2011] propose a dialog system, instead of a single fixed explanation, which allows the user to argue and ask questions.” 
 
 # Summary
 * Benefits
