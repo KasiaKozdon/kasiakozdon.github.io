@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>XAI: Explainable AI. An introduction. | Bio AI – All things brain</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="XAI: Explainable AI. An introduction." />
+<meta name="author" content="Katarzyna (Kasia) Kożdoń" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Bookmark this to keep an eye on my project updates!" />
+<meta property="og:description" content="Bookmark this to keep an eye on my project updates!" />
+<link rel="canonical" href="http://localhost:4000/explainableai/101/2024/05/09/XAI-Explainable-AI.html" />
+<meta property="og:url" content="http://localhost:4000/explainableai/101/2024/05/09/XAI-Explainable-AI.html" />
+<meta property="og:site_name" content="Bio AI – All things brain" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-05-09T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="XAI: Explainable AI. An introduction." />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Katarzyna (Kasia) Kożdoń"},"dateModified":"2024-05-09T00:00:00+02:00","datePublished":"2024-05-09T00:00:00+02:00","description":"Bookmark this to keep an eye on my project updates!","headline":"XAI: Explainable AI. An introduction.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/explainableai/101/2024/05/09/XAI-Explainable-AI.html"},"url":"http://localhost:4000/explainableai/101/2024/05/09/XAI-Explainable-AI.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Bio AI – All things brain" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Bio AI – All things brain</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">XAI: Explainable AI. An introduction.</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2024-05-09T00:00:00+02:00" itemprop="datePublished">May 9, 2024
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="markdown-toc">
+  <li><a href="#xai-explainable-ai-an-introduction" id="markdown-toc-xai-explainable-ai-an-introduction">XAI: Explainable AI. An introduction.</a></li>
+  <li><a href="#who-can-benefit-from-xai" id="markdown-toc-who-can-benefit-from-xai">Who can benefit from XAI?</a></li>
+  <li><a href="#what-kinds-of-xai-methods-are-there" id="markdown-toc-what-kinds-of-xai-methods-are-there">What kinds of XAI methods are there?</a>    <ul>
+      <li><a href="#complexity-related-methods" id="markdown-toc-complexity-related-methods">Complexity-related methods</a></li>
+      <li><a href="#scope-related-methods" id="markdown-toc-scope-related-methods">Scope-related methods</a></li>
+      <li><a href="#model-related-methods" id="markdown-toc-model-related-methods">Model-related methods</a></li>
+      <li><a href="#example-saliency-maps" id="markdown-toc-example-saliency-maps">Example: saliency maps</a></li>
+    </ul>
+  </li>
+  <li><a href="#how-can-we-evaluate-explanations" id="markdown-toc-how-can-we-evaluate-explanations">How can we evaluate explanations?</a></li>
+  <li><a href="#prediction-interpretation--justification" id="markdown-toc-prediction-interpretation--justification">Prediction interpretation &amp; justification</a>    <ul>
+      <li><a href="#adding-facts-problem-solving-preferred-over-deleting-them-logical-reasoninganswer-a" id="markdown-toc-adding-facts-problem-solving-preferred-over-deleting-them-logical-reasoninganswer-a">Adding facts (problem solving) preferred over deleting them (logical reasoning)[answer A]</a></li>
+      <li><a href="#perceived-fault-and-causality-how-the-outcome-would-be-different-if-the-action-would-have-been-different-vs-perception-of-blame-reduction-how-the-outcome-would-be-the-same-if-action-would-have-been-different" id="markdown-toc-perceived-fault-and-causality-how-the-outcome-would-be-different-if-the-action-would-have-been-different-vs-perception-of-blame-reduction-how-the-outcome-would-be-the-same-if-action-would-have-been-different">Perceived fault and causality (how the outcome would be different if the action would have been different) vs perception of blame reduction (how the outcome would be the same if action would have been different)</a></li>
+      <li><a href="#focus-on-exceptional-controllable-recent-and-action-based" id="markdown-toc-focus-on-exceptional-controllable-recent-and-action-based">Focus on exceptional, controllable, recent, and action-based</a></li>
+    </ul>
+  </li>
+  <li><a href="#recommender-systems" id="markdown-toc-recommender-systems">Recommender systems</a></li>
+  <li><a href="#counterfactuals" id="markdown-toc-counterfactuals">Counterfactuals</a>    <ul>
+      <li><a href="#desirable-characteristics" id="markdown-toc-desirable-characteristics">Desirable characteristics</a></li>
+    </ul>
+  </li>
+  <li><a href="#summary" id="markdown-toc-summary">Summary</a></li>
+  <li><a href="#references" id="markdown-toc-references">References</a></li>
+</ul>
+
+<h1 id="xai-explainable-ai-an-introduction">XAI: Explainable AI. An introduction.</h1>
+<p>With the rapidly increasing abundance of AI in all areas of our lives, we are starting to pay more attention to how exactly its decisions are produced. Methodologies assisting with gaining understanding of the AI models are referred to as Explainable AI (XAI). These methods can highlight the main data features affecting a model’s decision, indicate how robust a decisions is, and privide information needed to fix a model.<br />
+We will talk in more detail about what XAI is and why it matters; about how the explanations can be useful, but also misleading.<br />
+Lets start by clarifying what we mean by XAI. According to IBM:</p>
+<blockquote>
+  <p>“Explainable artificial intelligence (XAI) is a set of processes and methods that allows human users to comprehend and trust the results and output created by machine learning algorithms. Explainable AI is used to describe an AI model, its expected impact and potential biases. It helps characterize model accuracy, fairness, transparency and outcomes in AI-powered decision making.” [0]</p>
+</blockquote>
+
+<p>That’s a lot of words, but little concrete details. The reason for this vagueness is that:</p>
+<blockquote>
+  <p>“Technically, there is no standard and generally accepted definition of explainable AI. Actually, XAI term tends to refer to the movement, initiatives, and efforts made in response to AI transparency and trust concerns, more than to a formal technical concept.” [1]</p>
+</blockquote>
+
+<p>There is no black and white rule defining what is and what is not XAI. Still, during the last few years, we saw a lot of progress, systematisation, and, importantly, criticisms leading to further improvements. According to Google trends, XAI is an increasingly popular term.</p>
+
+<p><img src="https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/XAI_google_trends.png" alt="XAI google trends" /></p>
+
+<p>Because it is important to understand things in proportion (aka Hans Rosling’s <a href="https://www.gapminder.org/factfulness/size/">rule nr 5</a>), lets compare that trendline to the AI trend (in red):
+<img src="https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/XAI_vs_AI_google_trends.png" alt="XAI vs AI google trends" />
+Popularity of XAI may be increasing, but it remains a niche subject in comparison to the popularity of AI in general. XAI is sometimes seen as being at odds with making the models better, as a distraction from the “main” objective and a resourses sink. This article is intended to clarify this misconception, and highlight the benefits and XAI for general public, engineers, and businesses.</p>
+
+<h1 id="who-can-benefit-from-xai">Who can benefit from XAI?</h1>
+<p>When it comes to AI, all of us are stakeholders, mostly in more than one way. Use of XAI can benefit all stakeholder groups.<br />
+<strong>Users</strong> and <strong>by-standers</strong> (non-users who may still be affected). In some cases, the user has the right to explanation. Under European Union’s General Data Protection Regulation (GDPR), a person has the right to an explanation and chalenging decisons which were made in an automated way. French Digital Republic Act specifically lists that even partially automated decisions made by public sector bodies should by accompanied by information on handling of data parameters, including their weighting.<br />
+<strong>Decision makers</strong>, non-AI experts who use AI to augment their decisions. This includes doctors.  <br />
+<strong>Regulatory entities and agencies</strong>… well, lets hope that when they benefit, it is for our own benefit. Bodies such as GDPR, DARPA ensure consistency with the existing legislation and user rights.<br />
+<strong>ML engineers</strong> are rarely listed as a group benefitting from XAI; they are usually seen as being forced to implement XAI for the benefit of other stakeholders. However, engineers are already routinely using XAI techniques, even if not under this name. Techniques used to gain understanding of the model’s strengths and weaknesses easily fall under the XAI umbrella. Their use changes model development from a blind hyperparameters grid search to a data-driven decision process. Other benefits of XAI include understanding what in the data and model matters in order to scale down the less needed parts. This benefits the efforts to drastically scale down the amount of resources needed for LLMs; similarly, it benefits the miniaturisation efforts are taking place at the TinyML end of ML spectrum. <br />
+<strong>Business decision-makers</strong> can take advantage of XAI to get information on model’s suitability as a product. This can include e.g. assessing whether the model performs well on the markets of interest; under what conditions the model is likely to fail. Finally, explanation itself can be a product or a differentiator of a product! We will look at this case later, illustrated by recommender systems.</p>
+
+<h1 id="what-kinds-of-xai-methods-are-there">What kinds of XAI methods are there?</h1>
+<p>TODO diagram https://miro.medium.com/v2/resize:fit:720/format:webp/1*Qr0is7LEUjhl9pIdv4sNHA.jpeg<br />
+It’s time to introduce a bit more systematisation. I will use XAI classification proposed by <a href="https://ieeexplore.ieee.org/document/8466590">Adadi and Berrada</a>. The categories are not exclusive; a model can be assessed within each of the categories.</p>
+<h2 id="complexity-related-methods">Complexity-related methods</h2>
+<p>Here, we can talk about methods that are <strong>directly interpretable</strong>, or that can be <strong>reverse engineered</strong> (post-hoc). This is sometimes presented as Interpretable AI vs Explainable AI.<br />
+Directly interpretable models, as the name suggests, can be understood readily, with no additional methodology required. Examples include decision trees. A decision tree is a hierarchical model where the branching points (nodes) are inquiries, and branches represent possible answer. Traversing the tree culminates in reaching an end node representing a decision. Such trees used to be constructed manually; now are a common trained ML model. <br />
+<img src="https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/decision_tree.png" alt="decision tree" /><br />
+Reverse engineered methods apply to models which are black boxes. The models are developed, and only then, post hoc, explainability methodologies are applied.</p>
+
+<h2 id="scope-related-methods">Scope-related methods</h2>
+<p>Explanations can also be provided to capture how model’s decisions are made in general - these are referred to as <strong>global</strong> , or to explain how a given decision was made (<strong>local</strong>).</p>
+<h2 id="model-related-methods">Model-related methods</h2>
+<p>Some of the XAI methods are <strong>model specific</strong>, they work based on unique features of a given model type. An example includes explanations based on posterior probabilities of nodes in a Bayesian Network. While these XAI methods lack generalisability, they make up for it with excelling at making the most out of the model characteristics. <br />
+<strong>Model agnostic</strong> methods can be applied to a wide range of ML models. They treat the model as a black box, and focus on explaining input-output relations rather than the inner working of the model. Model agnstic methods include visualisations, knowledge extraction, influence methods, and example-based methods. To start with, we have <strong>visualisations</strong>, e.g. created with surrogate models and partial dependence plots. Surrogate models are simpler, more easily interpretable or explainable models trained on the pairs input-output of the model under investigation (which was trained on pairs input-correct answer). Development of surrogate models presents a bit of cat and mouse problem. A simple surrogate model fulfills the requirement for interpretability; but due to its simplicity, it may fail to faithfully capture the behaviour of the model under investigation. A more complex surrogate model could do a better job at capturing the dynamics of the investigated model - but would it still provide the benefit of interpretability or explainability? This dillema illustrates that XAI techniques can shift the problem instead of solving it. Their correctness requires maybe even more scrutiny than the original model, given the trustworthiness they are assumed to provide.<br />
+Partial dependence plots are an example of a quite different visualisation. They illustrate a relation between an input feature or features and the output of the model. Usually, all but one features are kept constant, while the feature of interest is varied and the resulting output captured. Through this, we can see whether the impact of the feature is linear, monotonic etc.<br />
+We could also try to <strong>extract the “knowledge”</strong> from the model. This could rely on extracting the rules, in effect creating a system resembling Good Old Fashioned AI, a rule-based expert system. Alternatively, we could destill the model, compress it by using the original model as a teacher for a smaller, transparent model. Here, we would typically use not only the class predicted by the teacher model, but the predicted probabilities (logits, to be specific) of all possible classes, thus also providing information about the relations between the classess to the student network.<br />
+Conversely, <strong>influence methods</strong> estimate the relevance of a feature by altering either the input or internal parameters of the model, then measuring the impact of these alterations on the model’s dynamics, predictions and errors. <br />
+Finally, we have <strong>example-based</strong> explanations. Here, we can use <em>prototypes</em> to demonstrate representative data examples, and <em>criticisms</em> to demonstrate underrepresented samples the model may not generalise to. There are also <em>counterfactuals</em>, which resemble adversarial examples (data samples with alterations which change the predictions), but designed with focus to improve understanding of the model. More about these later.</p>
+
+<h2 id="example-saliency-maps">Example: saliency maps</h2>
+<p>Lets illustrate how an explanation can fit into the above categories using saliency maps. This method is model specific, it is applied to image inputs of CNNs. Multiple types of saliency maps exist, but they share visualisation of which pixels contributed to the prediction the most. The method is local, it illustrates how a decision on one particular image was made.<br />
+<img src="https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/smoothgrad.png" alt="saliency maps" /><br />
+It is very likely that even if you do not work with CNNs, you came across these. They offer intuitive, easily interpretable information that frequently made its way to popular science articles. The image above is aligned with our gut feeling for how a gold fish or a bear could be recognised; what features could be relied on. And here I would like to strongly point something out: I never told you if the network how well the network was doing, whether it classified every eye as a fish and every dog muzzle as a bear. Likely, seeing an explanation that matched your intuitive sense of what is correct gave you trust in the method and in the model. Visualisations of explanations <a href="https://harmanpk.github.io/Papers/CHI2020_Interpretability.pdf">have been reported</a> to elicit trust even in expert users, and even in the absence of the understanding of the underlaying mechansms and ability to assess the explanation’s correctness: “[The tool] shows visualizations of ML models, which is not something anything else I have worked with has done. It’s very transparent, and that makes me trust it more”.</p>
+
+<h1 id="how-can-we-evaluate-explanations">How can we evaluate explanations?</h1>
+<p>Explanations themselves can assessed, e.g. based on for whom and in what context they are intended to serve. <a href="https://arxiv.org/pdf/1702.08608">Doshi-Velez and Kim</a> proposed distinguish three categories of explanation evaluations: application-grounded, human-grounded, and functionally-grounded.  <br />
+<strong>Application-grounded</strong> explanation evaluations assess how the explanations assist humans in performing a real task. Their success can be assessed by the performance improvement of the person, and therefore indirectly. Studies with medical <a href="https://youtu.be/htjpbbvHJQo?si=hjkI0HNWiY6760_n">doctors</a> shown that providing access to both model predictions and their explanation resulted in the highest diagnosis accuracy. Interestingly, providing explanations that were incorrect or low quality had a negative impact, suggesting that it was the correctness of the provided explanation rather than a psychological effect of the availability of any explanation that mattered for the performance.  <br />
+<strong>Human-grounded</strong> explanation assessments are based on human preference or ability to reason about a model from the explanation. Capturing preferences can be as simple as asking users to select their preferred explanation. To assess the ability of the explanation to improve person’s ability to reason about the model, we can present a scenario alongside the model’s explanation, prompting individuals to predict the model’s output. The correctness of their prediction is related to the quality of the explanation.<br />
+<strong>Functionally-grounded</strong> which judges explanations without human input, based on some formal proxy for interpretability. The proxies could be e.g. the number of rules required to explain the system or alignment of the interpretable surrogate model with the black box model. The formality and quantitativeness of this approach may create the impression that the explanations were conformed to be correct. In reality, the quentitative metrics can be unrelated to the correctness of the explanation. Similarly, the use of metrics can create the impression of objectiveness; however, the choice and design of the metrics can be rooted in subjective human choices. Overall, you should evaluate functionally-grounded explanations with the same level of scrutiny as you would with others. 
+Explanation evaluations can produce inconsistent results. Whenever  human judgement is involved, the outcomes of the assessments are also affected by the UI, phrasing, incentived given to the users etc.</p>
+
+<h1 id="prediction-interpretation--justification">Prediction interpretation &amp; justification</h1>
+<p>Limitless explanations can be created. Which explanations are useful? Can the choice of explanation manipulate the user? Based on examples from [3].</p>
+<h3 id="adding-facts-problem-solving-preferred-over-deleting-them-logical-reasoninganswer-a">Adding facts (problem solving) preferred over deleting them (logical reasoning)[answer A]</h3>
+<p>Info on what would make the outcome better preferred to what would make it worse [answer A]</p>
+<h3 id="perceived-fault-and-causality-how-the-outcome-would-be-different-if-the-action-would-have-been-different-vs-perception-of-blame-reduction-how-the-outcome-would-be-the-same-if-action-would-have-been-different">Perceived fault and causality (how the outcome would be different if the action would have been different) vs perception of blame reduction (how the outcome would be the same if action would have been different)</h3>
+<h3 id="focus-on-exceptional-controllable-recent-and-action-based">Focus on exceptional, controllable, recent, and action-based</h3>
+
+<h1 id="recommender-systems">Recommender systems</h1>
+<ul>
+  <li>Previous choices of the user, e.g. films with favourite actor</li>
+  <li>Choices of similar users (collaborative filtering)</li>
+  <li>Model features</li>
+  <li>Hybrid 
+“(…) previous studies have often evaluated the persuasiveness of the justification and not its justifiability. 
+Their experiments showed that for justifiability, feature-based justifications were superior to neighbor-based and user-history-based ones.” [4]
+<img src="https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/psychology_of_explanation.jpg" alt="psychology of explanations" /></li>
+</ul>
+
+<p>TODO: “Certain AI problems (such as content recommendation or information retrieval) also aim at producing diverse recommendations rather than highly-scoring yet similar results. “</p>
+
+<h1 id="counterfactuals">Counterfactuals</h1>
+<ul>
+  <li>By definition, cannot be based on data alone (involve scenarios that did not happen)</li>
+  <li>Not limited to XAI
+    <ul>
+      <li>Liability determination, e.g. does smoking cause cancer?</li>
+      <li>Strategy assessment, e.g. user was shown advert x , and bought the product. Would the user have bought the product if no advert had been shown?</li>
+    </ul>
+  </li>
+  <li>Goal-dependent
+“﻿An explanation of a decision intended to help the user understand the AI system and make inferences about its future performance could best rely on better-world counterfactuals; 
+an explanation intended to ensure the user feels a decision was justified or excusable could rely on worse-world counterfactuals.”</li>
+</ul>
+
+<h2 id="desirable-characteristics">Desirable characteristics</h2>
+<ul>
+  <li>Plausible</li>
+  <li>Distributionally faithful</li>
+  <li>Possible quality metric: Out of Distribution number</li>
+  <li>Sparse (had few feature differences)</li>
+  <li>Proximate (the closest possible world)
+E.g. Nearest Unlike Neighbour</li>
+  <li>Preferably actionable</li>
+</ul>
+
+<p>TODO</p>
+<ul>
+  <li>chatGPT</li>
+  <li>“[Dodson et al., 2011] propose a dialog system, instead of a single fixed explanation, which allows the user to argue and ask questions.”</li>
+</ul>
+
+<h1 id="summary">Summary</h1>
+<ul>
+  <li>Benefits</li>
+  <li>XAI as assistance in ML development</li>
+</ul>
+
+<h1 id="references">References</h1>
+<ol>
+  <li>IBM <a href="https://www.ibm.com/topics/explainable-ai">“What is explainable AI?”</a></li>
+  <li>Adadi and Berrada, 2018</li>
+  <li>Doshi-Velez and Kim, 2017</li>
+  <li>Byrne, 2019</li>
+  <li>Biran and Cotton, 2017</li>
+  <li>https://harmanpk.github.io/Papers/CHI2020_Interpretability.pdf</li>
+</ol>
+
+  </div><a class="u-url" href="/explainableai/101/2024/05/09/XAI-Explainable-AI.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Bio AI – All things brain</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Katarzyna (Kasia) Kożdoń</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Bookmark this to keep an eye on my project updates!</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
