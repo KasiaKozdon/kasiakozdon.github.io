@@ -65,15 +65,15 @@ Explanation evaluations can produce inconsistent results. Whenever  human judgem
 
 # Commercialisation example: recommender systems 
 Have you ever stopped to consider how often you encounter AI outputs accompanied by explanations? Maybe you haven't noticed, but you come across these quite frequently, whether it's a recommendation on a streaming service, in an online shop, a chatbot assisting you with customer service, or even a smart assistant helping you manage your schedule. AI explanations can become an add-on to a product or even the product itself.  
-You will easily recognise these types of explanations from recommender systems:  
-* Previous choices of the user, e.g. films with favourite actor.
-* Choices of similar users (collaborative filtering).
-* Model features, e.g. recommendation based on your location or time of the day. 
-“(...) previous studies have often evaluated the persuasiveness of the justification and not its justifiability. 
-Their experiments showed that for justifiability, feature-based justifications were superior to neighbor-based and user-history-based ones.” [4]
-![psychology of explanations](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/psychology_of_explanation.jpg)
+You will easily recognise trecommendations based on:  
+* Previous choices of the user, e.g. films with favourite actor.  
+![netflix history](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/recommender.png)  
+* Choices of similar users or recommendation of similar items (collaborative filtering).
+![webshop raspberry pi](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/recommender_collaborative.png)  
+* Model features, e.g. recommendation based on your location or time of the day.
 
 # Interactive XAI
+
 TODO 
 - chatGPT
 - “[Dodson et al., 2011] propose a dialog system, instead of a single fixed explanation, which allows the user to argue and ask questions.” 
@@ -82,4 +82,7 @@ TODO
 # Summary
 * Benefits
 * XAI as assistance in ML development
+“(...) previous studies have often evaluated the persuasiveness of the justification and not its justifiability. 
+Their experiments showed that for justifiability, feature-based justifications were superior to neighbor-based and user-history-based ones.” [4]
+![psychology of explanations](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/psychology_of_explanation.jpg)
 
