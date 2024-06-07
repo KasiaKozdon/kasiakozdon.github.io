@@ -1,7 +1,9 @@
+---
+title:  "Counterfactuals"
+categories: [causalAI, 101]
+isPost: true
 layout: post
-title: "Welcome to my new site!"
-date: 2023-07-17
-categories: to-remove
+---
 
 # Counterfactuals
 * By definition, cannot be based on data alone (involve scenarios that did not happen)
