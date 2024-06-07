@@ -60,15 +60,8 @@ The image above is aligned with our gut feeling for how a gold fish or a bear co
 Explanations themselves can assessed, e.g. based on whom and in what context they are intended to serve. [Doshi-Velez and Kim](https://arxiv.org/pdf/1702.08608) proposed distinguish three categories of explanation evaluations: application-grounded, human-grounded, and functionally-grounded.    
 **Application-grounded** explanation evaluations assess how the explanations assist humans in performing a real task. Their success can be assessed by the performance improvement of the person, and therefore indirectly. Studies with medical [doctors](https://youtu.be/htjpbbvHJQo?si=hjkI0HNWiY6760_n) shown that providing access to both model predictions and their explanation resulted in the highest diagnosis accuracy. Interestingly, providing explanations that were incorrect or low quality had a negative impact, suggesting that it was the correctness of the provided explanation rather than a psychological effect of the availability of any explanation that mattered for the performance.    
 **Human-grounded** explanation assessments are based on human preference or ability to reason about a model from the explanation. Capturing preferences can be as simple as asking users to select their preferred explanation. To assess the ability of the explanation to improve person's ability to reason about the model, we can present a scenario alongside the model's explanation, prompting individuals to predict the model's output. The correctness of their prediction is related to the quality of the explanation.  
-**Functionally-grounded** which judges explanations without human input, based on some formal proxy for interpretability. The proxies could be e.g. the number of rules required to explain the system or alignment of the interpretable surrogate model with the black box model. The formality and quantitativeness of this approach may create the impression that the explanations were conformed to be correct. In reality, the quentitative metrics can be unrelated to the correctness of the explanation. Similarly, the use of metrics can create the impression of objectiveness; however, the choice and design of the metrics can be rooted in subjective human choices. Overall, we should evaluate functionally-grounded explanations with the same level of scrutiny as any others. 
+**Functionally-grounded** which judges explanations without human input, based on some formal proxy for interpretability. The proxies could be e.g. the number of rules required to explain the system or alignment of the interpretable surrogate model with the black box model. The formality and quantitativeness of this approach may create the impression that the explanations were conformed to be correct. In reality, the quentitative metrics can be unrelated to the correctness of the explanation. Similarly, the use of metrics can create the impression of objectiveness; however, the choice and design of the metrics can be rooted in subjective human choices. Overall, we should evaluate functionally-grounded explanations with the same level of scrutiny as any others.   
 Explanation evaluations can produce inconsistent results. Whenever  human judgement is involved, the outcomes of the assessments are also affected by the UI, phrasing, incentived given to the users etc.  
-
-# Prediction interpretation & justification
-Limitless explanations can be created. Which explanations are useful? Can the choice of explanation manipulate the user? Based on examples from [3].
-### Adding facts (problem solving) preferred over deleting them (logical reasoning)[answer A]
-Info on what would make the outcome better preferred to what would make it worse [answer A]
-### Perceived fault and causality (how the outcome would be different if the action would have been different) vs perception of blame reduction (how the outcome would be the same if action would have been different)
-### Focus on exceptional, controllable, recent, and action-based
 
 # Recommender systems
 * Previous choices of the user, e.g. films with favourite actor
@@ -81,28 +74,12 @@ Their experiments showed that for justifiability, feature-based justifications w
 
 TODO: "Certain AI problems (such as content recommendation or information retrieval) also aim at producing diverse recommendations rather than highly-scoring yet similar results. "
 
-
-# Counterfactuals
-* By definition, cannot be based on data alone (involve scenarios that did not happen)
-* Not limited to XAI
-  * Liability determination, e.g. does smoking cause cancer?
-  * Strategy assessment, e.g. user was shown advert x , and bought the product. Would the user have bought the product if no advert had been shown?
-* Goal-dependent
-“﻿An explanation of a decision intended to help the user understand the AI system and make inferences about its future performance could best rely on better-world counterfactuals; 
-an explanation intended to ensure the user feels a decision was justified or excusable could rely on worse-world counterfactuals.” 
-
-## Desirable characteristics
-* Plausible
-* Distributionally faithful
-* Possible quality metric: Out of Distribution number 
-* Sparse (had few feature differences) 
-* Proximate (the closest possible world)
-E.g. Nearest Unlike Neighbour
-* Preferably actionable
-
 TODO 
 - chatGPT
 - “[Dodson et al., 2011] propose a dialog system, instead of a single fixed explanation, which allows the user to argue and ask questions.” 
+
+
+
 
 # Summary
 * Benefits
