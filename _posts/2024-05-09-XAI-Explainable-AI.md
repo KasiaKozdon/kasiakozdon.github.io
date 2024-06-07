@@ -12,11 +12,11 @@ layout: post
 With the rapidly increasing abundance of AI in all areas of our lives, we are starting to pay more attention to how exactly its decisions are produced. Methodologies assisting with gaining understanding of the AI models are referred to as Explainable AI (XAI). These methods can highlight the main data features affecting a model's decision, indicate how robust a decisions is, and privide information needed to fix a model.  
 We will talk in more detail about what XAI is and why it matters; about how the explanations can be useful, but also misleading.  
 XAI is sometimes seen as being at odds with making the models better, as a distraction from the "main" objective and a resourses sink. This article is intended to clarify this misconception, and highlight the benefits and XAI for general public, engineers, and businesses.  
-Lets start by clarifying what we mean by XAI. According to IBM:
->"Explainable artificial intelligence (XAI) is a set of processes and methods that allows human users to comprehend and trust the results and output created by machine learning algorithms. Explainable AI is used to describe an AI model, its expected impact and potential biases. It helps characterize model accuracy, fairness, transparency and outcomes in AI-powered decision making." [0]
+Lets start by clarifying what we mean by XAI. According to [IBM](https://www.ibm.com/topics/explainable-ai):
+>"Explainable artificial intelligence (XAI) is a set of processes and methods that allows human users to comprehend and trust the results and output created by machine learning algorithms. Explainable AI is used to describe an AI model, its expected impact and potential biases. It helps characterize model accuracy, fairness, transparency and outcomes in AI-powered decision making."
 
 That's a lot of words, but little concrete details. The reason for this vagueness is that:
->"Technically, there is no standard and generally accepted definition of explainable AI. Actually, XAI term tends to refer to the movement, initiatives, and efforts made in response to AI transparency and trust concerns, more than to a formal technical concept.” [1]
+>"Technically, there is no standard and generally accepted definition of explainable AI. Actually, XAI term tends to refer to the movement, initiatives, and efforts made in response to AI transparency and trust concerns, more than to a formal technical concept.” ([see: Adadi & Beerada](https://ieeexplore.ieee.org/document/8466590)).
 
 There is no black and white rule defining what is and what is not XAI. Still, during the last few years, we saw a lot of progress, systematisation, and, importantly, criticisms leading to further improvements. According to Google trends, XAI is an increasingly popular term.
 
@@ -49,7 +49,7 @@ Some of the XAI methods are **model specific**, they work based on unique featur
 Another example of visualisation are partial dependence plots. They illustrate a relation between an input feature or features and the output of the model. Usually, all but one features are kept constant, while the feature of interest is varied and the resulting output captured. Through this, we can see whether the impact of the feature is linear, monotonic etc.  
 We could also try to **extract the "knowledge"** from the model. This could rely on extracting the rules, in effect creating a system resembling Good Old Fashioned AI, a rule-based expert system. Alternatively, we could destill the model, compress it by using the original model as a teacher for the smaller, transparent model. Here, we would typically use not only the class predicted by the teacher model, but the predicted probabilities (logits, to be specific) of all possible classes, thus also providing information about the relations between the classess to the student network.  
 Conversely, **influence methods** estimate the relevance of a feature by altering either the input or internal parameters of the model, then measuring the impact of these alterations on the model's dynamics, predictions and errors.   
-Finally, we have **example-based** explanations. Here, we can use *prototypes* to demonstrate representative data examples, and *criticisms* to demonstrate underrepresented samples the model may not generalise to. There are also *counterfactuals*, which resemble adversarial examples (data samples with alterations which change the predictions), but designed with focus to improve understanding of the model. More about these later.    
+Finally, we have **example-based** explanations. Here, we can use *prototypes* to demonstrate representative data examples, and *criticisms* to demonstrate underrepresented samples the model may not generalise to. There are also *counterfactuals*, which resemble adversarial examples (data samples with alterations which change the predictions), but designed with focus to improve understanding of the model. More about these in the future.    
 
 ## Example of an explanation method: saliency maps
 Lets use saliency maps to illustrate how an explanation can fit into the above categories. Saliency maps are model specific, the method is applied to input of a CNNs (which typically is an image). It is very likely that even if you do not work with CNNs, you came across these. They offer intuitive, easily interpretable information that frequently made its way to popular science articles. Multiple types of saliency maps exist, but they all visualise which pixels contributed to the prediction the most. The method is local because it illustrates how a decision on one particular image was made, and provides little information about the model in general.  
@@ -63,32 +63,23 @@ Explanations themselves can assessed, e.g. based on whom and in what context the
 **Functionally-grounded** which judges explanations without human input, based on some formal proxy for interpretability. The proxies could be e.g. the number of rules required to explain the system or alignment of the interpretable surrogate model with the black box model. The formality and quantitativeness of this approach may create the impression that the explanations were conformed to be correct. In reality, the quentitative metrics can be unrelated to the correctness of the explanation. Similarly, the use of metrics can create the impression of objectiveness; however, the choice and design of the metrics can be rooted in subjective human choices. Overall, we should evaluate functionally-grounded explanations with the same level of scrutiny as any others.   
 Explanation evaluations can produce inconsistent results. Whenever  human judgement is involved, the outcomes of the assessments are also affected by the UI, phrasing, incentived given to the users etc.  
 
-# Recommender systems
-* Previous choices of the user, e.g. films with favourite actor
-* Choices of similar users (collaborative filtering)
-* Model features 
-* Hybrid 
+# Commercialisation example: recommender systems 
+Have you ever stopped to consider how often you encounter AI outputs accompanied by explanations? Maybe you haven't noticed, but you come across these quite frequently, whether it's a recommendation on a streaming service, in an online shop, a chatbot assisting you with customer service, or even a smart assistant helping you manage your schedule. AI explanations can become an add-on to a product or even the product itself.  
+You will easily recognise these types of explanations from recommender systems:  
+* Previous choices of the user, e.g. films with favourite actor.
+* Choices of similar users (collaborative filtering).
+* Model features, e.g. recommendation based on your location or time of the day. 
 “(...) previous studies have often evaluated the persuasiveness of the justification and not its justifiability. 
 Their experiments showed that for justifiability, feature-based justifications were superior to neighbor-based and user-history-based ones.” [4]
 ![psychology of explanations](https://github.com/KasiaKozdon/kasiakozdon.github.io/blob/XAI/_assets/2024-05-09-XAI-Explainable-AI/psychology_of_explanation.jpg)
 
-TODO: "Certain AI problems (such as content recommendation or information retrieval) also aim at producing diverse recommendations rather than highly-scoring yet similar results. "
-
+# Interactive XAI
 TODO 
 - chatGPT
 - “[Dodson et al., 2011] propose a dialog system, instead of a single fixed explanation, which allows the user to argue and ask questions.” 
-
-
 
 
 # Summary
 * Benefits
 * XAI as assistance in ML development
 
-# References
-0. IBM ["What is explainable AI?"](https://www.ibm.com/topics/explainable-ai)
-1. Adadi and Berrada, 2018
-2. Doshi-Velez and Kim, 2017
-4. Byrne, 2019
-5. Biran and Cotton, 2017
-6. https://harmanpk.github.io/Papers/CHI2020_Interpretability.pdf
